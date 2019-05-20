@@ -1,0 +1,8 @@
+prefix=/home/antonino/project/catkin_ws/devel
+
+Name: projects_robotics
+Description: Description of projects_robotics
+Version: 0.0.0
+Cflags: -I/home/antonino/project/catkin_ws/devel/include
+Libs: -L/home/antonino/project/catkin_ws/devel/lib 
+Requires: message_runtime
