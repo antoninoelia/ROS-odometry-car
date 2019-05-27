@@ -7,7 +7,7 @@ project(projects_robotics)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS message_generation std_msgs rospy roscpp message_filters)
+find_package(catkin REQUIRED COMPONENTS message_generation std_msgs rospy roscpp message_filters tf dynamic_reconfigure nav_msgs)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -44,7 +44,7 @@ find_package(catkin REQUIRED COMPONENTS message_generation std_msgs rospy roscpp
 
 ## Generate messages in the 'msg' folder
 add_message_files(FILES
-  odom_message.msg
+  customOdometry.msg
   floatStamped.msg
 )
 
@@ -86,6 +86,12 @@ generate_messages(DEPENDENCIES
 #   cfg/DynReconf1.cfg
 #   cfg/DynReconf2.cfg
 # )
+##add dynamic reconfigure api
+##find_package(catkin REQUIRED dynamic_reconfigure)
+generate_dynamic_reconfigure_options(
+  cfg/dynamic_ric.cfg
+
+)
 
 ###################################
 ## catkin specific configuration ##
