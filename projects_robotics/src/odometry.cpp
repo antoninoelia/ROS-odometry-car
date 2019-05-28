@@ -1,3 +1,26 @@
+/**
+  * @file odometry.cpp
+  * @author Alessia Paccagnella
+  * @author Antonino Elia Mandri
+  *
+  * Project of the robotics course of Politecnico di Milano
+  * This software reads left wheel speed, right wheel speed and 
+  * steering angle from three topics and calculates the odometry 
+  * of the car.
+  *
+  * Compute two different odometry: 
+  *     using Differential Drive Kinematics
+  *     using Ackerman model
+  *
+  * Uses dynamic reconfigure to switch between different published
+  * odometry and to reset the odometry to (0,0) or to set to a
+  * specific starting point (x,y).
+  *
+  * Publishes odometry as tf, odom topic with standard ros message 
+  * "nav_msg/Odometry", simple_odom topic with a custom message
+  * that contains position and type of algorithm used.
+**/
+
 #include "ros/ros.h"
 #include "projects_robotics/floatStamped.h"
 #include "projects_robotics/customOdometry.h"
