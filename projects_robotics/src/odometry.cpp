@@ -8,7 +8,7 @@
   * steering angle from three topics and calculates the odometry 
   * of the car.
   *
-  * Compute two different odometry: 
+  * Computes two different odometry: 
   *     using Differential Drive Kinematics
   *     using Ackerman model
   *
