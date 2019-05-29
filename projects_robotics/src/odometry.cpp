@@ -71,6 +71,7 @@ class odometry_car
 {
 private:
 
+    tf::TransformBroadcaster odom_broadcaster;
     Pose current_pose;
     Velocity velocity;
     double steering_factor;
@@ -176,7 +177,6 @@ public:
         ros::Time current_time = ros::Time::now();
         geometry_msgs::TransformStamped odom_trans;
         geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(current_pose.theta);
-        tf::TransformBroadcaster odom_broadcaster;
 
         custom_odom->header.stamp = current_time;
         custom_odom->header.frame_id = "odom";
