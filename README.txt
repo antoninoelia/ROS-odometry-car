@@ -12,13 +12,15 @@ CUSTOM MESSAGES
 The custom messages we are using are the floatStamped that contains
 	Header header
 	float64 data
+and it is published on "\odom" topic;
 
-and customOdometry that contains
+the customOdometry that contains
 	Header header
 	float64 x
 	float64 y
 	float64 theta
 	string algorithm_type
+and it is published on "\simple_odom";
 
 DYNAMIC RECONFIGURATION:
 Name of the parameter to change odometry source:
