@@ -2,25 +2,26 @@ TEAM MEMBERS
 870594 Alessia Paccagnella, 870882 Antonino Elia Mandri.
 
 FILES INSIDE THE ARCHIVE
-Inside the archive there are three main files:
+Inside the archive there are four main files:
 1) Executable odometry.cpp that contains the code of the program.
 2) Custom message floatStamped that is used to read the topics speedR_stamped, steerL_stamped, steer_stamped.
 3) Custom message customOdometry that is used to publish pose and type of algorithm used.
 4) The file dynamic_ric.cfg that allows the dynamic reconfigure during the execution.
 
 CUSTOM MESSAGES
-The custom messages we are using are the floatStamped that contains
+The custom messages we are using are:
+The floatStamped that contains
 	Header header
 	float64 data
 and it is published on "\odom" topic;
 
-the customOdometry that contains
+The customOdometry that contains
 	Header header
 	float64 x
 	float64 y
 	float64 theta
 	string algorithm_type
-and it is published on "\simple_odom";
+and it is published on "\simple_odom".
 
 DYNAMIC RECONFIGURATION:
 Name of the parameter to change odometry source:
