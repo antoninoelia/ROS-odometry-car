@@ -1,5 +1,5 @@
 TEAM MEMBERS
-870594 Alessia Paccagnella, 870882 Antonino Elia Mandri.
+Alessia Paccagnella, Antonino Elia Mandri.
 
 FILES INSIDE THE ARCHIVE
 Inside the archive there are four main files:
